@@ -1,0 +1,271 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww17440\viewh24640\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\b\fs36 \cf0 Whiteboard
+\b0\fs24 \
+Version 3.1.4\
+\
+\
+---\
+\
+\
+
+\b\fs36 About
+\b0\fs24 \
+\
+\
+
+\fs30 Description
+\fs24 \
+  The Whiteboard Famework for Wordpress is built to speed up the process of developing a Wordpress theme. Whiteboard does so by eliminating the time spent on Wordpress' backend PHP that is common to all Wordpress powered Web site. Now paired with Less Framework, Whiteboard even further reduces the development time to create a Wordpress powered responsive website.\
+\
+\
+
+\fs28 Responsive Web Design and Less Framework:
+\fs24 \
+  The idea behind Less Framework is to present visitors with a website tailored to the device they are using. If visitors load a website using their desktop computer the experience will be custom tailored for that sized screen. Similarly, if they load it on their iPhone or Smartphone they will view the same website but with a different layout, custom tailored for their device. A nice example of this practice is Stephen Caver's website (http://stephencaver.com/)\
+  Further reading can be found on A List Apart (http://www.alistapart.com/articles/responsive-web-design/) or on Less Framework (http://lessframework.com)\
+\
+\
+
+\fs30 Copyright
+\fs24 \
+  The Whiteboard Framework is licensed under the GPL license. Feel free to use the Whiteboard Framework for commercial and non-commercial ventures. We only require a link in the CSS and greatly appreciate a link somewhere on the Web site.\
+  Less Framework is license under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/). While links on the website or CSS file are not required, they are greatly appreciated.\
+\
+\
+
+\fs30 Compatibility
+\fs24 \
+  Current known compatibility is with Wordpress 3.1 and up\
+  Compatibility with earlier versions or Wordpress is currently unknown, but should be functional - at least with Wordpress 3.0 and up. But who needs compatibility with older versions always? Upgrade people!\
+\
+\
+
+\fs30 Building Websites with the Whiteboard Framework
+\fs24 \
+  At the minimum building with the Whiteboard Famework requires knowledge in HTML5 & CSS, at least a basic knowledge of PHP is recommended. Reference the Wordpress.org Codex for explanations on specific PHP tags and expanding and customizing Whiteboard further.\
+\
+\
+
+\fs28 Removing Less Framework 3, All Basic Styling, & CSS Reset:
+\fs24 \
+  Remove the line of CSS in header.php that calls "lessframework.css" and "theme.css" located right above the call for "style.css" very close to the end of the </head> tag (Yes, that's all you have to do)\
+\
+\
+
+\fs28 Making Images Resize Proportionally for Varying Sizes:
+\fs24 \
+  Making your images resize as the website changes widths is very easy to do. Check out Responsive Images on Github (https://github.com/filamentgroup/Responsive-Images)\
+  A great example of this practice is Hicks Design's Website (http://www.hicksdesign.co.uk/)\
+\
+\
+---\
+\
+\
+
+\fs30 Bugs
+\fs24 \
+  Slight inconsistencies between the list of divs in style.css and the actual divs used in Whiteboard (not even really a bug)\
+\
+\
+
+\fs32 Update Log:
+\fs24 \
+\
+
+\b version 3.1.4
+\b0 \
+  Added Post Format support - learn more: http://codex.wordpress.org/Post_Formats\
+  Spelling fix - thanks to Paul Chamberlain\
+  Fixed a minor bug with the custom header image - thanks to Daniel Mclaughlan and Janel Sheehan\
+  Customized RSS feed to help increase conversation\
+\
+\
+
+\b version 3.1.3
+\b0 \
+  Improved SEO\
+  Improved the Title tag\
+  Fixed the featured image section so it doesn't output a div when there isn't a featured image\
+  Changed the single-post class to post-single, fixing a conflict between it an a Wordpress automatically generated class\
+  Other minor bug fixes - bugs did not effect site performance\
+  Theme compression\
+\
+
+\b version 3.1.2
+\b0 \
+  Minor bug fixes - bugs did not effect performance or output\
+  Added Less Framework 4\
+  Added retina media query\
+\
+
+\b version 3.1.1
+\b0 \
+  Minor bug fix - removed duplicate IDs from widget areas - Thanks to Marco for pointing this out.\
+  Improved div classes\
+\
+
+\b version 3.1
+\b0 \
+  Incorporated Less Framework 3\
+    Added a little styling to Less Framework 3\
+    Slightly altered Less Framework 3's fonts\
+    Added comments to Less Framework 3\
+    Typographic improvements for smaller widths\
+  Added a basic/minimal theme that is easy to remove\
+  Removed SenCSS\
+  Improved Accessibility - moving towards following the Web Accessibility Initiative\
+  Added documentation\
+  Small improvements to the div structure\
+    Added some clears for the theme\
+    Added a few divs for increased flexibility\
+    Reorganized a little bit of the framework's content\
+  Code compression\
+  Improved SEO\
+  Follows Wordpress' CSS Coding Standards (http://codex.wordpress.org/CSS_Coding_Standards)\
+  Header image support\
+  Improved cross-browser compatibility\
+  Different primary navigation for logged in & not-logged in users\
+  Fixed a bug where Wordpress custom menus would not display where they were told to\
+\
+
+\b version 3.0.6
+\b0 \
+  Added a Whiteboard favicon\
+  Changed HTML comments to PHP Comments as to not output within the page's source code\
+  Cleaned up excessive notes\
+  Minor verbiage changes\
+  Theme compression\
+  Typo correction - thanks to Kurtis Holsapple for pointing them out\
+  Remove meta keywords\
+\
+
+\b version 3.0.5
+\b0 \
+  Gravatar bug fixes\
+  Graceful Gravatar degradation\
+  Added an intelligent user-comment class\
+    All commentators who comment while logged in will have the "user-comment" class on their comment's list item\
+  Improved IDs and Classes\
+\
+
+\b version 3.0.4
+\b0 \
+  Minor misc updates\
+  Added a modified version of the SenCSS Framework\
+    sencss.kilianvalkhof.com\
+  Streamlined functions.php\
+  Added a more intelligent jQuery Call\
+  Removed the canonical feature (turns out Wordpress has a smarter canonical function built in)\
+\
+
+\b version 3.0.3
+\b0 \
+  Added additional documentation\
+  Minor text and ordering updates\
+  Added additional styles\
+  Removed the Short URL service\
+\
+
+\b version 3.0.2
+\b0 \
+  Added HTML5 Tags: <header>, <footer>, <nav>, <article>\
+    Includes the Google HTML5 Shim to ensure Cross Browser Compatibility - http://code.google.com/html5shim/\
+    HTML5 helps improve SEO, if not today, then in the future\
+  Fixed some minor indentation issues\
+  Updated the list of styles in style.css\
+\
+
+\b version 3.0.1
+\b0 \
+  Additional documentation within the code\
+  Stronger SEO\
+\
+
+\b version 3.0\
+
+\b0   Almost complete re-development\
+    Re-built the loop\
+    Added dynamic classes to the header\
+  Rebuilt the div structure\
+    Added additional dynamic div classes and ids\
+    Added divs for stronger structure\
+  Adjusted the CSS IDs and Classes for greater consistency\
+  Wigitized the footer, header, beginning of the home page\
+  Added notes throughout\
+  Featured Image Support (requires WP 2.9 or greater)\
+  Supports Custom Menus\
+    Currently has three menu locations, the header, sidebar, and footer\
+  Supports Custom Backgrounds, requires WP 3.0 or greater\
+  Custom "Read More" text for post excerpts\
+  Added support for the virtually never pagination\
+  Completely reworked comments.php\
+    Cleaner structure\
+    Isolates Trackbacks\
+    Advanced Author Comment Styling\
+  Increased SEO Friendliness\
+    Improved Dynamic Title\
+    Dynamic meta tags: keywords & description\
+    Added <link rel="index">\
+    Dynamic title="" tags\
+    Added link:\
+      canonical - to help prevent duplicate content issues\
+      rss - to help alert google and increase subscriptions\
+      atom-rss - to provide rss options\
+    Added dynamic text throughout the site for additional SEO value\
+    Only the home page and post page contains the entire post, to reduce the chance of duplicate content problems\
+    And More\
+  Automatic Short URL from TinyURL\
+  Additional post and page meta info\
+  Minor bug fixes\
+  Improved search results page\
+  More intelligent Tags and Categories page\
+  Added space to the code\
+  Verbiage Improvements\
+  Child theme included with dummy-proofing\
+  Conforms to Wordpress' CSS Standards - http://codex.wordpress.org/CSS_Coding_Standards\
+  Converted classes and IDs from camelCase to hyphenated\
+  Added a mini admin navigation if logged in\
+  Uses the post_password_required function instead of the depreciated cookie check on comments.php\
+  Added category descriptions to the category pages\
+  Added tag descriptions to the tag pages\
+  Code optimized for speed\
+  Comforms to Wordpress' PHP Standards\
+\
+
+\b version 2.1
+\b0 \
+  Minor structure adjustments\
+    <div>s added\
+    classes added\
+  Minor bug fix\
+\
+
+\b version 2.0
+\b0 \
+  Overall re-working\
+  Comment page re-worked and bugs fixed\
+    Admin comments now better declared\
+    Separation of comments and trackbacks added\
+  New socialization links, others optional\
+  Categories.php and archives.php removed, there was no need for them\
+  Many minor bug/styling issues resolved\
+  <div> list updated in the CSS file\
+  Compatible with Wordpress 2.8\
+\
+
+\b version 1.5
+\b0 \
+   Updated the <title>\
+\
+
+\b version 1.4
+\b0 \
+   Added a missing <div> tag to single.php\
+   Added a list of the included divs\
+\
+versions 1.3 and earlier are not listed in the Update Log}

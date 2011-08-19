@@ -11,7 +11,7 @@
 					<?php the_content(); ?>
 					<?php wp_link_pages('before=<div class="pagination">&after=</div>'); ?>
 				</div><!--.post-content-->
-			<article>
+			</article>
 
 			<div id="post-meta">
 				<p>

@@ -106,7 +106,7 @@
 	add_filter('excerpt_more', 'custom_excerpt_more');
 	// no more jumping for read more link
 	function no_more_jumping($post) {
-		return '<a href="'.get_permalink($post->ID).'" class="read-more">'.'Continue Reading'.'</a>';
+		return '<a href="'.get_permalink($post->ID).'" class="read-more">'.'&nbsp; Continue Reading &raquo;'.'</a>';
 	}
 	add_filter('excerpt_more', 'no_more_jumping');
 	
@@ -121,16 +121,16 @@
 	add_filter('body_class', 'category_id_class');
 	
 	
-	add_action( 'admin_init', 'theme_options_init' );
-	add_action( 'admin_menu', 'theme_options_add_page' );
+	// add_action( 'admin_init', 'theme_options_init' );
+	// add_action( 'admin_menu', 'theme_options_add_page' );
 	
 	// Init plugin options to white list our options
-	function theme_options_init(){
-		register_setting( 'tat_options', 'tat_theme_options', 'theme_options_validate' );
-	}
+	// function theme_options_init(){
+	// 	register_setting( 'tat_options', 'tat_theme_options', 'theme_options_validate' );
+	// }
 	
 	// Load up the menu page
-	function theme_options_add_page() {
-		add_theme_page( __( 'Theme Options', 'tat_theme' ), __( 'Theme Options', 'tat_theme' ), 'edit_theme_options', 'theme_options', 'theme_options_do_page' );
-	}
+	// function theme_options_add_page() {
+	// 	add_theme_page( __( 'Theme Options', 'tat_theme' ), __( 'Theme Options', 'tat_theme' ), 'edit_theme_options', 'theme_options', 'theme_options_do_page' );
+	// }
 ?>

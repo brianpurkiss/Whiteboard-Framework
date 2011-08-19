@@ -16,7 +16,7 @@
 	} elseif ( is_single() ) {
 		wp_title('');
 	} else {
-		echo wp_title( ' | ', false, right ); bloginfo( 'name' );
+		echo wp_title(''); echo ' | '; bloginfo( 'name' );
 	} ?></title>
 	<meta name="description" content="<?php wp_title(''); echo ' | '; bloginfo( 'description' ); ?>" />
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -31,17 +31,17 @@
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+	<?php wp_head(); ?> <?php /* this is used by many Wordpress features and for plugins to work proporly */ ?>
 	<?php /* Remove the Less Framework CSS line to not include the CSS Reset, basic styles/positioning, and Less Framework itself */?>
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/lessframework.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/theme.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-	<?php wp_head(); ?> <?php /* this is used by many Wordpress features and for plugins to work proporly */ ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div class="hide">
+<div class="none">
 	<p><a href="#content">Skip to Content</a></p><?php /* used for accessibility, particularly for screen reader applications */ ?>
-</div><!--.hide-->
+</div><!--.none-->
 <div id="main"><!-- this encompasses the entire Web site -->
 	<div id="header"><header>
 		<div class="container">
@@ -55,7 +55,7 @@
 				<?php } ?>
 			</div><!--#title-->
 			<div id="header-image" class="container">
-				<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="<?php bloginfo('name'); ?>" />
+				<img src="<?php header_image(); ?>" width="<?php echo header_image_width; ?>" height="<?php echo header_image_height; ?>" alt="<?php bloginfo('name'); ?>" />
 			</div><!--#header-image-->
 			<div id="nav-primary" class="nav"><nav>
 				<?php if ( is_user_logged_in() ) {

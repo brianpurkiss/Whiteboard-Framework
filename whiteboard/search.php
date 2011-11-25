@@ -7,7 +7,12 @@
 		<div class="post-single">
 			<h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 			<?php if ( has_post_thumbnail() ) { /* loades the post's featured thumbnail, requires Wordpress 3.0+ */ echo '<div class="featured-thumbnail">'; the_post_thumbnail(); echo '</div>'; } ?>
-			<p>Written on <?php the_time('F j, Y'); ?> at <?php the_time() ?>, by <?php the_author_posts_link() ?></p>
+        <?php
+          $date = get_the_time(__('F j, Y', 'whiteboard'));
+          $time = get_the_time();
+          $authorlink = get_the_author_posts_link();
+          printf(__('Written on %1$s at %2$s, by %3$s', 'whiteboard'), $date, $time, $authorlink);
+        ?>
 	
 			<div class="post-excerpt">
 				<?php the_excerpt(); /* the excerpt is loaded to help avoid duplicate content issues */ ?>
@@ -15,8 +20,8 @@
 		</div><!--.post-single-->
 	<?php endwhile; else: ?>
 		<div class="no-results">
-			<h2>No Results</h2>
-			<p>Please feel free try again!</p>
+			<h2><?php _e('No Results', ''); ?></h2>
+			<p><?php _e('Please feel free try again!', ''); ?></p>
 			<?php get_search_form(); /* outputs the default Wordpress search form */ ?>
 		</div><!--no-results-->
 	<?php endif; ?>
@@ -24,12 +29,12 @@
 	<nav class="oldernewer">
 		<div class="older">
 			<p>
-				<?php next_posts_link('&laquo; Older Entries') ?>
+				<?php next_posts_link(__('&laquo; Older Entries', 'whiteboard')) ?>
 			</p>
 		</div><!--.older-->
 		<div class="newer">
 			<p>
-				<?php previous_posts_link('Newer Entries &raquo;') ?>
+				<?php previous_posts_link(__('Newer Entries &raquo;', 'whiteboard')) ?>
 			</p>
 		</div><!--.older-->
 	</nav><!--.oldernewer-->

@@ -2,17 +2,21 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<title><?php if ( is_category() ) {
-		echo 'Category Archive for &quot;'; single_cat_title(); echo '&quot; | '; bloginfo( 'name' );
+    printf(__('Category Archive for &quot;%1$s&quot; | %2$s', 'whiteboard'),
+      single_cat_title(), get_bloginfo('name', 'display'));
 	} elseif ( is_tag() ) {
-		echo 'Tag Archive for &quot;'; single_tag_title(); echo '&quot; | '; bloginfo( 'name' );
+    printf(__('Tag Archive for &quot;%1$s&quot; | %2$s', 'whiteboard'),
+      single_tag_title(), get_bloginfo('name', 'display'));
 	} elseif ( is_archive() ) {
-		wp_title(''); echo ' Archive | '; bloginfo( 'name' );
+    printf(__('%1$s Archive | %2$s', 'whiteboard'),
+      wp_title(''), get_bloginfo('name', 'display'));
 	} elseif ( is_search() ) {
-		echo 'Search for &quot;'.wp_specialchars($s).'&quot; | '; bloginfo( 'name' );
+    printf(__('Search for &quot;%1$s&quot; | %2$s', 'whiteboard'),
+      wp_specialchars($s), get_bloginfo('name', 'display'));
 	} elseif ( is_home() ) {
 		bloginfo( 'name' ); echo ' | '; bloginfo( 'description' );
 	}  elseif ( is_404() ) {
-		echo 'Error 404 Not Found | '; bloginfo( 'name' );
+    printf(__('Error 404 Not Found | %2$s', 'whiteboard'), get_bloginfo('name', 'display'));
 	} elseif ( is_single() ) {
 		wp_title('');
 	} else {
@@ -40,7 +44,7 @@
 
 <body <?php body_class(); ?>>
 <div class="none">
-	<p><a href="#content">Skip to Content</a></p><?php /* used for accessibility, particularly for screen reader applications */ ?>
+	<p><a href="#content"><?php _e('Skip to Content', 'whiteboard'); ?></a></p><?php /* used for accessibility, particularly for screen reader applications */ ?>
 </div><!--.none-->
 <div id="main"><!-- this encompasses the entire Web site -->
 	<div id="header"><header>

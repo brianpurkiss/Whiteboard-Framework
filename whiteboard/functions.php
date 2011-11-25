@@ -1,10 +1,12 @@
 <?php
-	// enables wigitized sidebars
+  load_theme_textdomain("whiteboard", get_template_directory() . '/languages');
+
+  // enables wigitized sidebars
 	if ( function_exists('register_sidebar') )
 
 	// Sidebar Widget
 	// Location: the sidebar
-	register_sidebar(array('name'=>'Sidebar',
+	register_sidebar(array('name'=>__('Sidebar', 'whiteboard'),
 		'before_widget' => '<div class="widget-area widget-sidebar"><ul>',
 		'after_widget' => '</ul></div>',
 		'before_title' => '<h3>',
@@ -12,7 +14,7 @@
 	));
 	// Header Widget
 	// Location: right after the navigation
-	register_sidebar(array('name'=>'Header',
+	register_sidebar(array('name'=>__('Header', 'whiteboard'),
 		'before_widget' => '<div class="widget-area widget-header"><ul>',
 		'after_widget' => '</ul></div>',
 		'before_title' => '<h4>',
@@ -20,7 +22,7 @@
 	));
 	// Footer Widget
 	// Location: at the top of the footer, above the copyright
-	register_sidebar(array('name'=>'Footer',
+	register_sidebar(array('name'=>__('Footer', 'whiteboard'),
 		'before_widget' => '<div class="widget-area widget-footer"><ul>',
 		'after_widget' => '</ul></div>',
 		'before_title' => '<h4>',
@@ -28,7 +30,7 @@
 	));
 	// The Alert Widget
 	// Location: displayed on the top of the home page, right after the header, right before the loop, within the content area
-	register_sidebar(array('name'=>'Alert',
+	register_sidebar(array('name'=>__('Alert', 'whiteboard'),
 		'before_widget' => '<div class="widget-area widget-alert"><ul>',
 		'after_widget' => '</ul></div>',
 		'before_title' => '<h4>',
@@ -43,10 +45,10 @@
 	if ( function_exists( 'register_nav_menus' ) ) {
 	  	register_nav_menus(
 	  		array(
-	  		  'header-menu' => 'Header Menu',
-	  		  'sidebar-menu' => 'Sidebar Menu',
-	  		  'footer-menu' => 'Footer Menu',
-	  		  'logged-in-menu' => 'Logged In Menu'
+	  		  'header-menu' => __('Header Menu', 'whiteboard'),
+	  		  'sidebar-menu' => __('Sidebar Menu', 'whiteboard'),
+	  		  'footer-menu' => __('Footer Menu', 'whiteboard'),
+	  		  'logged-in-menu' => __('Logged In Menu', 'whiteboard')
 	  		)
 	  	);
 	}
@@ -93,7 +95,7 @@
 	function rss_comment_footer($content) {
 		if (is_feed()) {
 			if (comments_open()) {
-				$content .= 'Comments are open! <a href="'.get_permalink().'">Add yours!</a>';
+				$content .= printf(__('Comments are open! <a href="%s">Add yours!</a>', 'whiteboard'), get_permalink());
 			}
 		}
 		return $content;
@@ -101,12 +103,12 @@
 
 	// custom excerpt ellipses for 2.9+
 	function custom_excerpt_more($more) {
-		return 'Read More &raquo;';
+		return __('Read More &raquo;', 'whiteboard');
 	}
 	add_filter('excerpt_more', 'custom_excerpt_more');
 	// no more jumping for read more link
 	function no_more_jumping($post) {
-		return '<a href="'.get_permalink($post->ID).'" class="read-more">'.'&nbsp; Continue Reading &raquo;'.'</a>';
+		return printf(__('<a href="%s" class="read-more">&nbsp; Continue Reading &raquo;</a>', 'whiteboard'), get_permalink($post->ID));
 	}
 	add_filter('excerpt_more', 'no_more_jumping');
 	
@@ -133,4 +135,29 @@
 	// function theme_options_add_page() {
 	// 	add_theme_page( __( 'Theme Options', 'tat_theme' ), __( 'Theme Options', 'tat_theme' ), 'edit_theme_options', 'theme_options', 'theme_options_do_page' );
 	// }
+
+/**
+ * Returns a link to the author page of the author of the current post.
+ *
+ * This is a modified version of the_author_posts_link() without the depricated
+ * part.
+ *
+ * @link http://codex.wordpress.org/Template_Tags/the_author_posts_link
+ * @see the_author_posts_link()
+ * @uses $authordata The current author's DB object.
+ * @uses get_author_posts_url()
+ * @uses get_the_author()
+ */
+  function get_the_author_posts_link() {
+    global $authordata;
+    if ( !is_object( $authordata ) )
+      return false;
+    $link = sprintf(
+      '<a href="%1$s" title="%2$s" rel="author">%3$s</a>',
+      get_author_posts_url( $authordata->ID, $authordata->user_nicename ),
+      esc_attr( sprintf( __( 'Posts by %s', 'whiteboard' ), get_the_author() ) ),
+      get_the_author()
+    );
+    return apply_filters( 'the_author_posts_link', $link );
+  }
 ?>

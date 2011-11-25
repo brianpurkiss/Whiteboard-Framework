@@ -1,0 +1,435 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Whiteboard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-11-28 12:10+0100\n"
+"PO-Revision-Date: 2011-11-28 12:14+0100\n"
+"Last-Translator: Adamek Zoltán <adamek.zoltan@gmail.com>\n"
+"Language-Team: Scorchio <adamek.zoltan@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_ngettext:1,2;esc_attr__:1;_n:1,2\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Poedit-Language: Hungarian\n"
+"X-Poedit-Country: HUNGARY\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard\n"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/archive.php:6
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Napi archívum: <span>%s</span>"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/archive.php:8
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Havi archívum: <span>%s</span>"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/archive.php:10
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Éves archívum: <span>%s</span>"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/archive.php:12
+msgid "Blog Archives"
+msgstr "Blogarchívum"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/archive.php:22
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/category.php:14
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/page.php:20
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/single.php:18
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/tag.php:18
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/index.php:16
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/author.php:36
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/search.php:11
+msgid "F j, Y"
+msgstr "Y. F j."
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/archive.php:25
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/category.php:17
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/tag.php:21
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/index.php:19
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/search.php:14
+#, php-format
+msgid "Written on %1$s at %2$s, by %3$s"
+msgstr "%3$s írta ekkor: %1$s %2$s"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/archive.php:34
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:15
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/category.php:26
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/single.php:21
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/tag.php:25
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/index.php:23
+msgid "No Comments"
+msgstr "Még nincsenek hozzászólások"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/archive.php:34
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:15
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/category.php:26
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/single.php:21
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/tag.php:25
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/index.php:23
+msgid "1 Comment"
+msgstr "Egy hozzászólás"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/archive.php:34
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:15
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/category.php:26
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/single.php:21
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/tag.php:25
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/index.php:23
+msgid "% Comments"
+msgstr "% hozzászólás"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/archive.php:36
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/single.php:24
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/index.php:25
+msgid "Categories:"
+msgstr "Kategóriák:"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/archive.php:38
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/category.php:30
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/single.php:26
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/tag.php:29
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/index.php:27
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/author.php:41
+msgid "Tags: "
+msgstr "Címkék: "
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/archive.php:44
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/category.php:36
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/tag.php:35
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/index.php:33
+msgid "There has been an error."
+msgstr "Hiba történt."
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/archive.php:46
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/category.php:37
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/tag.php:36
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/index.php:35
+#, php-format
+msgid "We apologize for any inconvenience, please <a href=\"%1$s/\" title=\"%2$s\">return to the home page</a> or use the search form below."
+msgstr "Elnézésedet kérjük a kellemetlenségért - <a href\"%1$s/\" title=\"%2$s\">visszatérhetsz a kezdőlapra</a>, vagy használhatod a keresőt, hátha mégis sikerül megtalálni, amit látni szerettél volna."
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/archive.php:55
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/category.php:45
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/tag.php:44
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/index.php:44
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/search.php:32
+msgid "&laquo; Older Entries"
+msgstr "&laquo; Korábbi bejegyzések"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/archive.php:60
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/category.php:50
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/tag.php:49
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/index.php:49
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/search.php:37
+msgid "Newer Entries &raquo;"
+msgstr "Újabb bejegyzések &raquo;"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/functions.php:9
+msgid "Sidebar"
+msgstr "Oldalsáv"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/functions.php:17
+msgid "Header"
+msgstr "Fejléc"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/functions.php:25
+msgid "Footer"
+msgstr "Lácléc"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/functions.php:33
+msgid "Alert"
+msgstr "Figyelmeztetés"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/functions.php:48
+msgid "Header Menu"
+msgstr "Fejléc menü"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/functions.php:49
+msgid "Sidebar Menu"
+msgstr "Oldalsáv menü"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/functions.php:50
+msgid "Footer Menu"
+msgstr "Lábléc menü"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/functions.php:51
+msgid "Logged In Menu"
+msgstr "Menü a bejelentkezett felhasználóknak"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/functions.php:98
+#, php-format
+msgid "Comments are open! <a href=\"%s\">Add yours!</a>"
+msgstr "<a href=\"%s\">Szólj hozzá Te is!</a>"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/functions.php:106
+msgid "Read More &raquo;"
+msgstr "Olvass tovább &raquo;"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/functions.php:111
+#, php-format
+msgid "<a href=\"%s\" class=\"read-more\">&nbsp; Continue Reading &raquo;</a>"
+msgstr "<a href=\"%s\" class=\"read-more\">&nbsp; Olvass tovább &raquo;</a>"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/functions.php:158
+#, php-format
+msgid "Posts by %s"
+msgstr "%s bejegyzései"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:4
+msgid "Please do not load this page directly or we will hunt you down. Thanks and have a great day!"
+msgstr "Ezt az oldalt nem kellene közvetlenül megnyitni - köszi :)"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:23
+msgid "Your comment is awaiting approval."
+msgstr "A hozzászólásod moderálásra vár."
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:30
+msgid "Edit Comment"
+msgstr "Hozzászólás szerkesztése"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:31
+#, php-format
+msgid "%1$s by %2$s on %3$s at %4$s"
+msgstr "%2$s írt ekkor: %3$s %4$s"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:41
+msgid "Trackbacks"
+msgstr "Visszakövetések"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:53
+msgid "No comments yet. You should be kind and add one!"
+msgstr "Nincsenek még hozzászólások. Lennél olyan kedves, hogy írj egyet?"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:60
+#, php-format
+msgid "Our apologies, you must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Elnézésedet kérjük, de <a href=\"%s\">be kell jelentkezned</a>, hogy hozzászólhass a bejegyzéshez."
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:69
+#, php-format
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out &raquo;</a>"
+msgstr "Be vagy jelentkezve <a href=\"%1$s\">%2$s</a> néven. <a href=\"%3$s\" title=\"Kijelentkezek\">Kijelentkeznél?</a>"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:73
+msgid "Allowed HTML tags: "
+msgstr "Engedélyezett HTML tag-ek: "
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:76
+msgid "Name "
+msgstr "Neved "
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:76
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:80
+msgid "(required)"
+msgstr "(szükséges)"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:80
+msgid "Mail (will not be published) "
+msgstr "E-mail címed (nem áruljuk el senkinek) "
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:84
+msgid "Website"
+msgstr "Weboldalad"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:89
+msgid "Comment"
+msgstr "Hozzászólás"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:93
+msgid "Submit Comment"
+msgstr "Hozzászólás beküldése"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:98
+#, php-format
+msgid "By submitting a comment you grant %s a perpetual license to reproduce your words and name/web site in attribution. Inappropriate and irrelevant comments will be removed at an admin’s discretion. Your email is used for verification purposes only, it will never be shared."
+msgstr "Azzal, hogy hozzászólsz, megadod %s weboldal szerkesztőinek a lehetőséget, hogy közreadják a megjegyzésedet. Az ide nem illő vagy a témába nem kapcsolódó hozzászólásokat az szerkesztők törölhetik. Az e-mail címedet csak ellenőrzésre használjuk fel, nem fogjuk megosztani."
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/comments.php:101
+msgid "The comments are closed."
+msgstr "Ehhez a témához nem lehet hozzászólni."
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/category.php:4
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Kategória archívum: %s"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/category.php:28
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/tag.php:27
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/author.php:40
+msgid "Categories: "
+msgstr "Kategóriák: "
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/page.php:8
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/single.php:8
+msgid "Edit this entry"
+msgstr "Bejegyzés szerkesztése"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/page.php:18
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/single.php:37
+#, php-format
+msgid "Written by %s"
+msgstr "Írta: %s"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/page.php:20
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/single.php:18
+#, php-format
+msgid "Posted on %1$s at %2$s"
+msgstr "Ekkor készült: %1$s %2$s"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/single.php:29
+msgid "Receive new post updates: "
+msgstr "Szeretnék értesülni az új bejegyzésekről: "
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/single.php:29
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/footer.php:11
+msgid "Entries (RSS)"
+msgstr "Bejegyzések (RSS)"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/single.php:31
+msgid "Receive follow up comments updates: "
+msgstr "Szeretnék értesülni az új hozzászólásokról: "
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/single.php:42
+#, php-format
+msgid "View all posts by: %s"
+msgstr "%s összes bejegyzésének megtekintése"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/single.php:52
+msgid "&laquo; Previous post"
+msgstr "&laquo; Előző bejegyzés"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/single.php:57
+msgid "Next post &raquo;"
+msgstr "Következő bejegyzés &raquo;"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/header.php:5
+#, php-format
+msgid "Category Archive for &quot;%1$s&quot; | %2$s"
+msgstr "Kategória archívum &quot;%1$s&quot; kategóriához | %2$s"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/header.php:8
+#, php-format
+msgid "Tag Archive for &quot;%1$s&quot; | %2$s"
+msgstr "Címke archívum &quot;%1$s&quot; címkéhez | %2$s\""
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/header.php:11
+#, php-format
+msgid "%1$s Archive | %2$s"
+msgstr "%1$s archívum | %2$s"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/header.php:14
+#, php-format
+msgid "Search for &quot;%1$s&quot; | %2$s"
+msgstr "Keresés &quot;%1$s&quot; | %2$s"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/header.php:19
+#, php-format
+msgid "Error 404 Not Found | %2$s"
+msgstr "404-es hiba - nem található az oldal | %2$s"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/header.php:47
+msgid "Skip to Content"
+msgstr "Ugrás a tartalomhoz"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/tag.php:4
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Címke archívum: %s"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/404.php:4
+msgid "Error 404 Not Found"
+msgstr "404-es hiba - nem található az oldal"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/404.php:6
+msgid "Oops. Fail. The page cannot be found."
+msgstr "Hupsz. Ez nem jött össze - nem találunk ilyen oldalt."
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/404.php:7
+msgid "Please check your URL or use the search form below."
+msgstr "Kérlek, ellenőrizd a címet, amit megadtál. Próbálkozz meg egy kereséssel is!"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/footer.php:10
+msgid "Top"
+msgstr "Ugrás az oldal tetejére"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/footer.php:11
+msgid "Comments (RSS)"
+msgstr "Hozzászólások (RSS)"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/footer.php:12
+msgid "All Rights Reserved."
+msgstr "Minden jog fenntartva."
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/footer.php:13
+msgid "Built on the <a href=\"http://whiteboardframework.com/\">Whiteboard Framework for Wordpress</a> <span class=\"amp\">&amp;</span> <a href=\"http://lessframework.com\">Less Framework</a>. Powered by <a href=\"http://wordpress.org\">Wordpress</a>."
+msgstr "Ez az oldal a <a href=\"http://whiteboardframework.com/\">Whiteboard Framework for Wordpress</a> és a <a href=\"http://lessframework.com\">Less Framework</a> keretrendszerekre épült. Az oldalt a <a href=\"http://wordpress.org\">Wordpress</a> hajtja."
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/sidebar.php:5
+msgid "Search"
+msgstr "Keresés"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/sidebar.php:10
+msgid "Navigation"
+msgstr "Navigáció"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/sidebar.php:17
+msgid "Archives"
+msgstr "Blogarchívum"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/sidebar.php:24
+msgid "Meta"
+msgstr "Meta"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/index.php:11
+msgid "Read more"
+msgstr "Olvass tovább"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/author.php:11
+#, php-format
+msgid "About %s"
+msgstr "%s profilja"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/author.php:22
+#, php-format
+msgid "Recent Posts by %s"
+msgstr "%s legutóbbi bejegyzései"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/author.php:38
+#, php-format
+msgid "Written on %1$s at %2$s"
+msgstr "Ekkor készült: %1$s %2$s"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/author.php:47
+#, php-format
+msgid "No posts by %s yet."
+msgstr "%s még nem írt bejegyzéseket."
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/author.php:53
+#, php-format
+msgid "Recent Comments by %s"
+msgstr "%s legutóbbi hozzászólásai"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/author.php:61
+#, php-format
+msgid "%1$s on %2$s"
+msgstr "%1$s on %2$s"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/author.php:64
+#, php-format
+msgid "No comments by %s yet."
+msgstr "%s még nem szólt hozzá egyik bejegyzéshez sem."
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/search.php:23
+msgid "No Results"
+msgstr "Nincsenek eredmények"
+
+#: /home/scorchio/Weboldalak/whiteboard/wp-content/themes/whiteboard/whiteboard/search.php:24
+msgid "Please feel free try again!"
+msgstr "Próbáld újra!"
+

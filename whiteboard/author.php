@@ -8,7 +8,7 @@
 		endif;
 	?>
 	<div class="author">
-		<h1>About: <?php echo $curauth->display_name; ?></h1>
+		<h1><?php printf(__('About %s', 'whiteboard'), $curauth->display_name) ?></h1>
 		<p class="avatar">
 			<?php if(function_exists('get_avatar')) { echo get_avatar( $curauth->user_email, $size = '180' ); } /* Displays the Gravatar based on the author's email address. Visit Gravatar.com for info on Gravatars */ ?>
 		</p>
@@ -19,7 +19,7 @@
 	</div><!--.author-->
 
 	<div id="recent-author-posts">
-		<h3>Recent Posts by <?php echo $curauth->display_name; ?></h3>
+    <h3><?php printf(__('Recent Posts by %s', 'whiteboard'), $curauth->display_name)?></h3>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); /* Displays the most recent posts by that author. Note that this does not display custom content types */ ?>
 			<?php static $count = 0;
 				if ($count == "5") // Number of posts to display
@@ -32,21 +32,25 @@
 					</div><!--.postContent-->
 					<div class="post-meta">
 						<p>
-							Written on <?php the_time('F j, Y'); ?> at <?php the_time() ?><br />
-							Categories: <?php the_category(', ');?>
-							<?php the_tags('<br />Tags: ', ', ', ' '); ?>
+              <?php
+                $date = get_the_time(__('F j, Y', 'whiteboard'));
+                $time = get_the_time();
+                printf(__('Written on %1$s at %2$s', 'whiteboard'), $date, $time);
+              ?><br />
+							<?php _e('Categories: ', 'whiteboard'); ?><?php the_category(', ');?>
+							<?php the_tags('<br />' . __('Tags: ', 'whiteboard'), ', ', ' '); ?>
 						</p>
 					</div><!--.postMeta-->
 			<?php $count++; } ?>
 		<?php endwhile; else: ?>
 				<p>
-					No posts by <?php echo $curauth->display_name; ?> yet.
+					<?php printf(__('No posts by %s yet.', 'whiteboard'), $curauth->display_name); ?>
 				</p>
 		<?php endif; ?>
 	</div><!--#recentPosts-->
 
 	<div id="recent-author-comments">
-		<h3>Recent Comments by <?php echo $curauth->display_name; ?></h3>
+		<h3><?php printf(__('Recent Comments by %s', 'whiteboard'), $curauth->display_name); ?></h3>
 			<?php
 				$number=5; // number of recent comments to display
 				$comments = $wpdb->get_results("SELECT * FROM $wpdb->comments WHERE comment_approved = '1' and comment_author_email='$curauth->user_email' ORDER BY comment_date_gmt DESC LIMIT $number");
@@ -54,10 +58,10 @@
 			<ul>
 				<?php
 					if ( $comments ) : foreach ( (array) $comments as $comment) :
-					echo  '<li class="recentcomments">' . sprintf(__('%1$s on %2$s'), get_comment_date(), '<a href="'. get_comment_link($comment->comment_ID) . '">' . get_the_title($comment->comment_post_ID) . '</a>') . '</li>';
+					echo  '<li class="recentcomments">' . sprintf(__('%1$s on %2$s', 'whiteboard'), get_comment_date(), '<a href="'. get_comment_link($comment->comment_ID) . '">' . get_the_title($comment->comment_post_ID) . '</a>') . '</li>';
 				endforeach; else: ?>
                 	<p>
-                		No comments by <?php echo $curauth->display_name; ?> yet.
+                		<?php printf(__('No comments by %s yet.', 'whiteboard'), $curauth->display_name); ?>
                 	</p>
 				<?php endif; ?>
             </ul>

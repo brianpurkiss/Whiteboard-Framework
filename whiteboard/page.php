@@ -15,9 +15,9 @@
 			</article>
 
 			<div id="page-meta">
-				<h3>Written by <?php the_author_posts_link() ?></h3>
+				<h3><?php _e('Written by '); the_author_posts_link() ?></h3>
 				<p class="gravatar"><?php if(function_exists('get_avatar')) { echo get_avatar( get_the_author_email(), '80' ); } ?></p>
-				<p>Posted on <?php the_time('F j, Y'); ?> at <?php the_time() ?></p>
+				<p><?php _e('Posted on '); the_time('F j, Y'); _e(' at '); the_time() ?></p>
 			</div><!--#pageMeta-->
 		</div><!--#post-# .post-->
 

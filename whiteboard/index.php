@@ -11,38 +11,24 @@
 					<?php the_content(__('Read more'));?>
 				</div>
 				<div class="post-meta">
-					<p>
-						Written on <?php the_time('F j, Y'); ?> at <?php the_time() ?>, by <?php the_author_posts_link() ?>
-					</p>
-					<p>
-						<?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?>
-						<br />
-						Categories: <?php the_category(', ') ?>
-						<br />
-						<?php if (the_tags('Tags: ', ', ', ' ')); ?>
-					</p>
+					<p><?php _e('Written on '); the_time('F j, Y'); _e(' at '); the_time(); _e(', by '); the_author_posts_link(); ?></p>
+					<p><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?>
+					<p><?php _e('Categories: '); the_category(', ') ?></p>
+					<p><?php if (the_tags('Tags: ', ', ', ' ')); ?></p>
 				</div><!--.postMeta-->
 			</div><!--.post-single-->
 		<?php endwhile; else: ?>
 			<div class="no-results">
-				<p><strong>There has been an error.</strong></p>
-				<p>We apologize for any inconvenience, please <a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('description'); ?>">return to the home page</a> or use the search form below.</p>
+				<p><strong><?php _e('There has been an error.'); ?></strong></p>
+				<p><?php _e('We apologize for any inconvenience, please hit back on your browser or use the search form below.'); ?></p>
 				<?php get_search_form(); /* outputs the default Wordpress search form */ ?>
 			</div><!--noResults-->
 		<?php endif; ?>
 			
-		<nav class="oldernewer">
-			<div class="older">
-				<p>
-					<?php next_posts_link('&laquo; Older Entries') ?>
-				</p>
-			</div><!--.older-->
-			<div class="newer">
-				<p>
-					<?php previous_posts_link('Newer Entries &raquo;') ?>
-				</p>
-			</div><!--.older-->
-		</nav><!--.oldernewer-->
+		<div class="oldernewer">
+			<p class="older"><?php next_posts_link('&laquo; Older Entries') ?></p>
+			<p class="newer"><?php previous_posts_link('Newer Entries &raquo;') ?></p>
+		</div><!--.oldernewer-->
 
 	</div><!--#content-->
 <?php get_sidebar(); ?>

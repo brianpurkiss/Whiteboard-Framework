@@ -4,8 +4,8 @@ Theme Name: Whiteboard
 Theme URI: http://whiteboardframework.com/
 Author: Bold Perspective
 Author URI: http://boldperspective.com/
-Description: The Whiteboard Famework for Wordpress is built to speed up the process of developing a Wordpress theme. Whiteboard does so by eliminating the time spent on Wordpress' backend PHP by including what is common to all Wordpress powered Web sites with nothing extra.
-Version: 3.1.4
+Description: Whiteboard Framework has been helping Wordpress developers cut back on their development time and improve their Wordpress powered websites since 2008.
+Version: 3.2
 
  * Built on the Whiteboard Framework
  * http://whiteboardframework.com
@@ -205,7 +205,7 @@ nav.oldernewer {
 	
 }
 
-.hide { /* this class is used to hid the skip to content link at the beginning of the document for accessibility */
+.none { /* this class is used to hid the skip to content link at the beginning of the document for accessibility */
 	display: none;
 }
 .clear {
@@ -216,6 +216,15 @@ nav.oldernewer {
 }
 .right {
 	float: right;
+}
+.aligncenter {
+	text-align: center;
+}
+.alignleft {
+	text-align: left;
+}
+.alignright {
+	text-align: right;
 }
 
 /* Always remember to compress your live stylesheet and keep an uncompressed backup */

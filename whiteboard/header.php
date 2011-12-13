@@ -22,7 +22,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<meta name="viewport" content="width=device-width; initial-scale=1"/><?php /* Add "maximum-scale=1" to fix the Mobile Safari auto-zoom bug on orientation changes, but keep in mind that it will disable user-zooming completely. Bad for accessibility. */ ?>
-	<link rel="icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="<?php bloginfo('template_url'); ?>/whiteboard_favicon.ico" type="image/x-icon" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo( 'name' ); ?>" href="<?php bloginfo( 'rss2_url' ); ?>" />
 	<link rel="alternate" type="application/atom+xml" title="<?php bloginfo( 'name' ); ?>" href="<?php bloginfo( 'atom_url' ); ?>" />
@@ -40,7 +40,7 @@
 
 <body <?php body_class(); ?>>
 <div class="none">
-	<p><a href="#content">Skip to Content</a></p><?php /* used for accessibility, particularly for screen reader applications */ ?>
+	<p><a href="#content"><?php _e('Skip to Content'); ?></a></p><?php /* used for accessibility, particularly for screen reader applications */ ?>
 </div><!--.none-->
 <div id="main"><!-- this encompasses the entire Web site -->
 	<div id="header"><header>
@@ -55,7 +55,7 @@
 				<?php } ?>
 			</div><!--#title-->
 			<div id="header-image" class="container">
-				<img src="<?php header_image(); ?>" width="<?php echo header_image_width; ?>" height="<?php echo header_image_height; ?>" alt="<?php bloginfo('name'); ?>" />
+				<img src="<?php header_image(); ?>" alt="<?php bloginfo('name'); ?>" />
 			</div><!--#header-image-->
 			<div id="nav-primary" class="nav"><nav>
 				<?php if ( is_user_logged_in() ) {

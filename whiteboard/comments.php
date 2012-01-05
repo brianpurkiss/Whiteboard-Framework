@@ -3,14 +3,14 @@
 	<?php if(!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME'])) : ?>
 	    <?php die('Please do not load this page directly or we will hunt you down. Thanks and have a great day!'); ?>
 	<?php endif; ?>
-	
+
 	<!-- Password Required -->
 	<?php if(!empty($post->post_password)) : ?>
 	    <?php if($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) : ?>
 	    <?php endif; ?>
 	<?php endif; ?>
-	
-	<?php $i++; ?> <!-- variable for alternating comment styles -->
+
+	<?php $i = 1; ?> <!-- variable for alternating comment styles -->
 	<?php if($comments) : ?>
 		<h3><?php comments_number('No comments', 'One comment', '% comments'); ?></h3>
 	    <ol>
@@ -31,7 +31,8 @@
 		            	<?php comment_type(); ?> by <?php comment_author_link(); ?> on <?php comment_date(); ?> at <?php comment_time(); ?>
 		            	<p class="gravatar"><?php if(function_exists('get_avatar')) { echo get_avatar($comment, '36'); } ?></p>
 		            </div><!--.commentMeta-->
-		        </li>
+            </li>
+          <?php $trackback = false; ?>
 			<?php } else { $trackback = true; } ?>
 	    <?php endforeach; ?>
 	    </ol>
@@ -50,7 +51,7 @@
 	<?php else : ?>
 	    <p><?php _e('No comments yet. You should be kind and add one!'); ?></p>
 	<?php endif; ?>
-	
+
 	<div id="comments-form">
 		<?php if(comments_open()) : ?>
 			<?php if(get_option('comment_registration') && !$user_ID) : ?>

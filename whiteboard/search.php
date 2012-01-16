@@ -7,7 +7,7 @@
 		<div class="post-single">
 			<h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 			<?php if ( has_post_thumbnail() ) { /* loades the post's featured thumbnail, requires Wordpress 3.0+ */ echo '<div class="featured-thumbnail">'; the_post_thumbnail(); echo '</div>'; } ?>
-			<p><?php _e('Written on '); the_time('F j, Y'); _e(' at '); the_time() _e(', by ');  the_author_posts_link() ?></p>
+			<p><?php _e('Written on '); the_time('F j, Y'); _e(' at '); the_time(); _e(', by ');  the_author_posts_link() ?></p>
 	
 			<div class="post-excerpt">
 				<?php the_excerpt(); /* the excerpt is loaded to help avoid duplicate content issues */ ?>

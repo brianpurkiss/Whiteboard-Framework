@@ -13,7 +13,7 @@
 			</div>
 	
 			<div class="post-meta">
-				<p><?php _e('Written on '); the_time('F j, Y'); _e(' at '); the_time() _e(', by '); the_author_posts_link() ?></p>
+				<p><?php _e('Written on '); the_time('F j, Y'); _e(' at '); the_time(); _e(', by '); the_author_posts_link() ?></p>
 				<p><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></p>
 				<p><?php _e('Categories: '); the_category(', ') ?></p>
 				<p><?php if (the_tags('Tags: ', ', ', ' ')); ?></p>

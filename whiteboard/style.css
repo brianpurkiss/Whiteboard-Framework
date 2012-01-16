@@ -5,7 +5,7 @@ Theme URI: http://whiteboardframework.com/
 Author: Bold Perspective
 Author URI: http://boldperspective.com/
 Description: Whiteboard Framework has been helping Wordpress developers cut back on their development time and improve their Wordpress powered websites since 2008.
-Version: 3.2
+Version: 3.2.1
 
  * Built on the Whiteboard Framework
  * http://whiteboardframework.com
@@ -22,7 +22,7 @@ List of divs in Whiteboard
 Note that this list does not include the dynamically generated ids and classes, such as the body classes, the post ids, etc
 */
 
-body{
+body {
 	
 }
 

@@ -137,8 +137,15 @@
 	}
 	add_filter('post_class', 'category_id_class');
 	add_filter('body_class', 'category_id_class');
-	
-	
+
+	// adds a class to the post if there is a thumbnail
+	function has_thumb_class($classes) {
+		global $post;
+		if( has_post_thumbnail($post->ID) ) { $classes[] = 'has_thumb'; }
+			return $classes;
+	}
+	add_filter('post_class', 'has_thumb_class');
+
 	// add_action( 'admin_init', 'theme_options_init' );
 	// add_action( 'admin_menu', 'theme_options_add_page' );
 	

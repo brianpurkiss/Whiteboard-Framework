@@ -19,13 +19,13 @@
 				<p><?php _e(' Categories: '); the_category(', ') ?></p>
 				<p><?php the_tags('Tags: ', ', ', ' '); ?></p>
 				<p><?php _e('Receive new post updates:'); ?> <a href="<?php bloginfo('rss2_url'); ?>" rel="nofollow">Entries (RSS)</a></p>
-				<p><?php _e('Receive follow up comments updates: '); ?><?php comments_rss_link('RSS 2.0'); ?></p>
+				<p><?php _e('Receive follow up comments updates: '); ?><?php post_comments_feed_link('RSS 2.0'); ?></p>
 			</div><!--#post-meta-->
 
 			<?php /* If a user fills out their bio info, it's included here */ ?>
 			<div id="post-author">
 				<h3><?php _e('Written by '); the_author_posts_link() ?></h3>
-				<p class="gravatar"><?php if(function_exists('get_avatar')) { echo get_avatar( get_the_author_email(), '80' ); /* This avatar is the user's gravatar (http://gravatar.com) based on their administrative email address */  } ?></p>
+				<p class="gravatar"><?php if(function_exists('get_avatar')) { echo get_avatar( get_the_author_meta('email'), '80' ); /* This avatar is the user's gravatar (http://gravatar.com) based on their administrative email address */  } ?></p>
 				<div id="authorDescription">
 					<?php the_author_meta('description') ?> 
 					<div id="author-link">

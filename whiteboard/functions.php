@@ -164,7 +164,7 @@
 	// learn more about the affiliate program: http://wplifeguard.com/affiliates/
 	add_action('admin_menu', 'lgap_add_pages');
 	function lgap_add_pages() {
-		add_menu_page(__('Help','menu-test'), __('Help','menu-test'), 'manage_options', 'lifeguard-assistant-plugin', 'lgap_main_page' );
+		add_menu_page(__('Help','menu-test'), __('Help','menu-test'), 'read', 'lifeguard-assistant-plugin', 'lgap_main_page' );
 	}
 	function lgap_main_page() {
 		echo "<h2>" . __( 'Help', 'menu-test' ) . "</h2>";

@@ -329,4 +329,13 @@ body {
 	
 }
 
+/* Enable images in posts to automatically resize */
+/* as browser window changes sizes.               */
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 /* Always remember to compress your live stylesheet and keep an uncompressed backup */

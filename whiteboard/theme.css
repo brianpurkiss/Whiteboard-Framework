@@ -329,4 +329,11 @@ body {
 	
 }
 
+/* Enable images to automatically resize */
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 /* Always remember to compress your live stylesheet and keep an uncompressed backup */

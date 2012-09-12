@@ -1,7 +1,6 @@
 <div id="sidebar">
-	<ul>
 		<?php if ( ! dynamic_sidebar( 'Sidebar' )) : ?>
-	
+	<ul>	
 			<li id="sidebar-search" class="widget">
 				<h3><?php _e('Search'); ?></h3>
 				<?php get_search_form(); /* outputs the default Wordpress search form */ ?>
@@ -29,7 +28,6 @@
 					<?php wp_meta(); ?>
 				</ul>
 			</li>
-	
-		<?php endif; ?>
 	</ul>
+		<?php endif; ?>
 </div><!--sidebar-->

@@ -63,7 +63,7 @@
 	}
 
 	// custom background support
-	add_custom_background();
+	add_theme_support('custom-background');
 
 	// custom header image support
 	define('NO_HEADER_TEXT', true );
@@ -79,7 +79,9 @@
 	        }
 	    </style><?php
 	}
-	add_custom_image_header( '', 'admin_header_style' );
+	add_theme_support('custom-header', array(
+		'admin-head-callback' => 'admin_header_style'
+	));
 
 	// adds Post Format support
 	// learn more: http://codex.wordpress.org/Post_Formats
@@ -100,7 +102,8 @@
 	function comment_count( $count ) {
 		if ( ! is_admin() ) {
 			global $id;
-			$comments_by_type = &separate_comments(get_comments('status=approve&post_id=' . $id));
+			$comments = get_comments('status=approve&postid=' . $id);
+			$comments_by_type = separate_comments($comments);
 			return count($comments_by_type['comment']);
 		} else {
 			return $count;

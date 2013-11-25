@@ -10,11 +10,12 @@
 	    <?php endif; ?>
 	<?php endif; ?>
 	
-	<?php $i++; ?> <!-- variable for alternating comment styles -->
+	<?php $i=0; ?> <!-- variable for alternating comment styles -->
 	<?php if($comments) : ?>
 		<h3><?php comments_number('No comments', 'One comment', '% comments'); ?></h3>
 	    <ol>
 	    <?php foreach($comments as $comment) : ?>
+		<?php $i++; ?>
 	    	<?php $comment_type = get_comment_type(); ?> <!-- checks for comment type -->
 	    	<?php if($comment_type == 'comment') { ?> <!-- outputs only comments -->
 		        <li id="comment-<?php comment_ID(); ?>" class="comment <?php if($i&1) { echo 'odd';} else {echo 'even';} ?> <?php $user_info = get_userdata(1); if ($user_info->ID == $comment->user_id) echo 'authorComment'; ?> <?php if ($comment->user_id > 0) echo 'user-comment'; ?>">

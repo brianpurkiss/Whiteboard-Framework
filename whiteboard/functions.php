@@ -42,7 +42,7 @@
 	    global $post;
 	    if(has_post_thumbnail($post->ID)) {
 	        $content = '<p>' . get_the_post_thumbnail($post->ID) .
-	        '</p>' . get_the_content();
+	        '</p>' . $content;
 	    }
 	    return $content;
 	}

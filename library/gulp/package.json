@@ -1,0 +1,26 @@
+{
+	"name": "gulpBuilder",
+	"version": "1.0.0b",
+	"description": "Gulp to complie SCSS, JS, Optimize Images, and use Browser-Sync.",
+	"author": "Brian Purkiss - http://brianpurkiss.com/",
+	"license": "GPL-2.0",
+	"dependencies": {
+		"bower": "^1.7.10",
+		"browserify": "^14.4.0",
+		"gulp": "^3.9.1",
+		"gulp-autoprefixer": "^4.0.0",
+		"gulp-browserify": "^0.5.1",
+		"gulp-concat": "^2.6.1",
+		"gulp-js-import": "^1.0.5",
+		"jshint": "^2.9.5",
+		"gulp-jshint": "^2.0.4",
+		"gulp-line-ending-corrector": "^1.0.1",
+		"gulp-load-plugins": "^1.5.0",
+		"gulp-notify": "^3.0.0",
+		"gulp-plumber": "^1.1.0",
+		"gulp-sass": "^3.1.0",
+		"gulp-sourcemaps": "^2.6.1",
+		"gulp-uglify": "^3.0.0",
+		"gulp-watch": "^4.3.11"
+	}
+}

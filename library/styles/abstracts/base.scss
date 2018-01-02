@@ -1,0 +1,8 @@
+// Asynchronous load Google web fonts
+body {
+  @include async-font($sans-serif);
+}
+
+
+// auto responsive images
+img { max-width: 100%; height: auto; }

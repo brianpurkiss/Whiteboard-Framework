@@ -1,0 +1,25 @@
+
+// Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
+@import "font-awesome/fontawesome";
+
+
+// Boostrap
+@import "bootstrap/functions";			// Boostrap functions, required before bootstrap variables
+@import 'bootstrap-variables';			// import bootstrap variables
+@import 'bootstrap/bootstrap';			// import bootstrap
+
+// Globals
+@import "abstracts/typography";     // Possible conflict with this typography and bootstrap typography
+@import "abstracts/base";           // Custom global styles
+@import "abstracts/animations";			// Global animations
+
+
+// Main site layout
+
+@import "layout/header";
+@import "layout/footer";
+
+
+// Individual pages and components
+
+@import "pages/home";

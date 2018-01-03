@@ -23,9 +23,6 @@ require get_template_directory() . '/functions/layout/class-id.php';
 // Comments
 require get_template_directory() . '/functions/layout/comments.php';
 
-// Header image
-require get_template_directory() . '/functions/layout/header-image.php';
-
 // Post/page
 require get_template_directory() . '/functions/layout/post-page.php';
 

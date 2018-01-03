@@ -47,26 +47,6 @@
 				<h3 id="tagline"><?php bloginfo('description'); ?></h3>
 			<?php } ?>
 		</div><?php // end #title ?>
-		<?php
-			// Check to see if the header image has been removed
-			$header_image = get_header_image();
-			if ( ! empty( $header_image ) ) :
-		?>
-			<?php
-				// The header image
-				// Check if this is a post or page, if it has a thumbnail, and if it's a big one
-				if ( is_singular() &&
-						has_post_thumbnail( $post->ID ) &&
-						( /* $src, $width, $height */ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), array( HEADER_IMAGE_WIDTH, HEADER_IMAGE_WIDTH ) ) ) &&
-						$image[1] >= HEADER_IMAGE_WIDTH ) :
-					// Houston, we have a new header image!
-					echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
-				else : ?>
-				<div id="header-image" class="container">
-					<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="<?php bloginfo('name'); ?>" />
-				</div><?php // end #header-image ?>
-			<?php endif; // end check for featured image or standard header ?>
-		<?php endif; // end check for removed header image ?>
 		<nav id="nav-primary" class="nav">
 			<?php if ( is_user_logged_in() ) {
 			     wp_nav_menu( array( 'theme_location' => 'logged-in-menu' ) ); /* if the visitor is logged in, this primary navigation will be displayed */

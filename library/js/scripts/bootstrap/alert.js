@@ -1,94 +1,194 @@
-/* ========================================================================
- * Bootstrap: alert.js v3.3.6
- * http://getbootstrap.com/javascript/#alerts
- * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
+import $ from 'jquery'
+import Util from './util'
+
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap (v4.0.0-beta.3): alert.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+ * --------------------------------------------------------------------------
+ */
+
+const Alert = (($) => {
 
 
-+function ($) {
-  'use strict';
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
 
-  // ALERT CLASS DEFINITION
-  // ======================
+  const NAME                = 'alert'
+  const VERSION             = '4.0.0-beta.3'
+  const DATA_KEY            = 'bs.alert'
+  const EVENT_KEY           = `.${DATA_KEY}`
+  const DATA_API_KEY        = '.data-api'
+  const JQUERY_NO_CONFLICT  = $.fn[NAME]
+  const TRANSITION_DURATION = 150
 
-  var dismiss = '[data-dismiss="alert"]'
-  var Alert   = function (el) {
-    $(el).on('click', dismiss, this.close)
+  const Selector = {
+    DISMISS : '[data-dismiss="alert"]'
   }
 
-  Alert.VERSION = '3.3.6'
+  const Event = {
+    CLOSE          : `close${EVENT_KEY}`,
+    CLOSED         : `closed${EVENT_KEY}`,
+    CLICK_DATA_API : `click${EVENT_KEY}${DATA_API_KEY}`
+  }
 
-  Alert.TRANSITION_DURATION = 150
+  const ClassName = {
+    ALERT : 'alert',
+    FADE  : 'fade',
+    SHOW  : 'show'
+  }
 
-  Alert.prototype.close = function (e) {
-    var $this    = $(this)
-    var selector = $this.attr('data-target')
 
-    if (!selector) {
-      selector = $this.attr('href')
-      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
+
+  class Alert {
+
+    constructor(element) {
+      this._element = element
     }
 
-    var $parent = $(selector)
 
-    if (e) e.preventDefault()
+    // getters
 
-    if (!$parent.length) {
-      $parent = $this.closest('.alert')
+    static get VERSION() {
+      return VERSION
     }
 
-    $parent.trigger(e = $.Event('close.bs.alert'))
 
-    if (e.isDefaultPrevented()) return
+    // public
 
-    $parent.removeClass('in')
+    close(element) {
+      element = element || this._element
 
-    function removeElement() {
-      // detach from parent, fire event then clean up data
-      $parent.detach().trigger('closed.bs.alert').remove()
+      const rootElement = this._getRootElement(element)
+      const customEvent = this._triggerCloseEvent(rootElement)
+
+      if (customEvent.isDefaultPrevented()) {
+        return
+      }
+
+      this._removeElement(rootElement)
     }
 
-    $.support.transition && $parent.hasClass('fade') ?
-      $parent
-        .one('bsTransitionEnd', removeElement)
-        .emulateTransitionEnd(Alert.TRANSITION_DURATION) :
-      removeElement()
+    dispose() {
+      $.removeData(this._element, DATA_KEY)
+      this._element = null
+    }
+
+
+    // private
+
+    _getRootElement(element) {
+      const selector = Util.getSelectorFromElement(element)
+      let parent     = false
+
+      if (selector) {
+        parent = $(selector)[0]
+      }
+
+      if (!parent) {
+        parent = $(element).closest(`.${ClassName.ALERT}`)[0]
+      }
+
+      return parent
+    }
+
+    _triggerCloseEvent(element) {
+      const closeEvent = $.Event(Event.CLOSE)
+
+      $(element).trigger(closeEvent)
+      return closeEvent
+    }
+
+    _removeElement(element) {
+      $(element).removeClass(ClassName.SHOW)
+
+      if (!Util.supportsTransitionEnd() ||
+          !$(element).hasClass(ClassName.FADE)) {
+        this._destroyElement(element)
+        return
+      }
+
+      $(element)
+        .one(Util.TRANSITION_END, (event) => this._destroyElement(element, event))
+        .emulateTransitionEnd(TRANSITION_DURATION)
+    }
+
+    _destroyElement(element) {
+      $(element)
+        .detach()
+        .trigger(Event.CLOSED)
+        .remove()
+    }
+
+
+    // static
+
+    static _jQueryInterface(config) {
+      return this.each(function () {
+        const $element = $(this)
+        let data       = $element.data(DATA_KEY)
+
+        if (!data) {
+          data = new Alert(this)
+          $element.data(DATA_KEY, data)
+        }
+
+        if (config === 'close') {
+          data[config](this)
+        }
+      })
+    }
+
+    static _handleDismiss(alertInstance) {
+      return function (event) {
+        if (event) {
+          event.preventDefault()
+        }
+
+        alertInstance.close(this)
+      }
+    }
+
   }
 
 
-  // ALERT PLUGIN DEFINITION
-  // =======================
+  /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */
 
-  function Plugin(option) {
-    return this.each(function () {
-      var $this = $(this)
-      var data  = $this.data('bs.alert')
+  $(document).on(
+    Event.CLICK_DATA_API,
+    Selector.DISMISS,
+    Alert._handleDismiss(new Alert())
+  )
 
-      if (!data) $this.data('bs.alert', (data = new Alert(this)))
-      if (typeof option == 'string') data[option].call($this)
-    })
+
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+  $.fn[NAME]             = Alert._jQueryInterface
+  $.fn[NAME].Constructor = Alert
+  $.fn[NAME].noConflict  = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT
+    return Alert._jQueryInterface
   }
 
-  var old = $.fn.alert
+  return Alert
 
-  $.fn.alert             = Plugin
-  $.fn.alert.Constructor = Alert
+})($)
 
-
-  // ALERT NO CONFLICT
-  // =================
-
-  $.fn.alert.noConflict = function () {
-    $.fn.alert = old
-    return this
-  }
-
-
-  // ALERT DATA-API
-  // ==============
-
-  $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
-
-}(jQuery);
+export default Alert

@@ -1,4 +1,5 @@
 <?php
+
 // category id in body and post class
 function category_id_class($classes) {
 	global $post;
@@ -9,6 +10,7 @@ function category_id_class($classes) {
 add_filter('post_class', 'category_id_class');
 add_filter('body_class', 'category_id_class');
 
+
 // adds a class to the post if there is a thumbnail
 function has_thumb_class($classes) {
 	global $post;
@@ -16,3 +18,12 @@ function has_thumb_class($classes) {
 		return $classes;
 }
 add_filter('post_class', 'has_thumb_class');
+
+
+// Adds class to prev-next links
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+    return 'class="btn btn-outline-primary"';
+}
